@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        .calculator {
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 5px;
+            box-shadow: 2px 2px 3px 3px rgb(240, 224, 80);
+            width: 24%;
+            padding: 20px;
+            max-width: 350px;
+        }
+        input {
+            width: 60px;
+            height: 40px;
+            font-size: 200%;
+            margin-bottom: 2px;
+        }
+        .button:hover {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Calculator</h2>
+        <form action="" class="calculate" name="mainform">
+            <input type="text" name="answer" id="display" style="width:80%; height:7vh; margin-bottom: 10px; background-color: lightgray;"><br>
+            <!-- Rest of your input buttons -->
+            <input class='button' type="button" value="1" onclick=" mainform.answer.value +='1' ">
+            <input class='button' type="button" value="2" onclick=" mainform.answer.value +='2' ">
+            <input class='button' type="button" value="3" onclick=" mainform.answer.value +='3' ">
+            <input class='button' type="button" value="4" onclick=" mainform.answer.value +='4' "><br>
+            <input class='button' type="button" value="5" onclick=" mainform.answer.value +='5' ">
+            <input class='button' type="button" value="6" onclick=" mainform.answer.value +='6' ">
+            <input class='button' type="button" value="7" onclick=" mainform.answer.value +='7' ">
+            <input class='button' type="button" value="8" onclick=" mainform.answer.value +='8' "><br>
+            <input class='button' type="button" value="9" onclick=" mainform.answer.value +='9' ">
+            <input class='button' type="button" value="0" onclick=" mainform.answer.value +='0' ">
+            <input class='button' type="button" value="C" style="background-color: red;" onclick=" mainform.answer.value ='' ">
+            <input class='button' type="button" value="+" style="background-color: rgb(123, 229, 123);" onclick=" mainform.answer.value +='+' "><br>
+            <input class='button' type="button" value="-" style="background-color: rgb(128, 184, 238);" onclick=" mainform.answer.value +='-' ">
+            <input class='button' type="button" value="*" style="background-color: rgb(168, 91, 235);" onclick=" mainform.answer.value +='*' ">
+            <input class='button' type="button" value="/" style="background-color: rgb(199, 234, 102);" onclick=" mainform.answer.value +='/' ">
+            <input class='button' type="button" value="=" style="background-color: rgb(241, 100, 180);" onclick=" mainform.answer.value =eval(mainform.answer.value) ">
+        </form>
+    </div>
+</body>
+</html>
